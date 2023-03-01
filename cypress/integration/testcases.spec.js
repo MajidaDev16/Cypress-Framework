@@ -15,7 +15,7 @@ describe('Test cases example', () => {
         SignInPage.errorMessage.should('contain.text', '');
     });
 
-    it('login with valid account', () => {
+    it.only('login with valid account', () => {
         HomePage.clickSignInLink();
         cy.login2Step('validLogin');
         HomePage.isSignedIn().should('eq', true);
